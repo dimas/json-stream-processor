@@ -2,7 +2,7 @@
 
 `json-stream-processor` is a simple tool helping processing huge JSON files without loading entire file into memory.
 
-History and motivation
+# History and motivation
 
 I needed to process a large JSON file that was just an array of items similar to:
 ```
