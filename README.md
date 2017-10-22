@@ -140,7 +140,7 @@ but want to drop "details" object from each item because you do not need it and 
 
 ```ruby
   def append(value)
-    super unless level == 2 and key == "details"
+    super unless level == 2 and pos == "details"
   end
 ```
 
