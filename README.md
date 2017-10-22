@@ -153,9 +153,9 @@ a way smaller file for further processing.
 
 You probably are not concerned with performance too much if you are processing your JSON with Ruby but anyways, lets have some numbers.
 
-First of all, choice os the parser
+First of all, choice of the parser
 
-My `test.json` is about 200Mb in size and has an array with about 2M entries.
+My `test.json` is about 200Mb in size and has an array with around 2M entries.
 
 ```ruby
 require 'json/stream'
