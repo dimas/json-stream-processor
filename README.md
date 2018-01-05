@@ -98,6 +98,7 @@ The `append` method is invoked for ALL object and values, not just top level one
 Note that `append` is invoked **at the end of the value** - when it is fully read. See the example below showing invocations of `append` method for a sample JSON.
 
 ```
+                        // Invocations of append method
   {
     "key1": true,       // level=1, path=["key1"],                pos="key1",  value=true
     "key2": [
@@ -107,8 +108,8 @@ Note that `append` is invoked **at the end of the value** - when it is fully rea
           100           // level=4, path=["key2", 1, "inner", 0], pos=0,       value=100
         ]               // level=3, path=["key2", 1, "inner"],    pos="inner", value=[100]
       }                 // level=2, path=["key2", 1],             pos=1,       value={"inner": [100]}
-    ]                   // level=1, path=["key2"],                pos="key2",  value=[]
-  }                     // level=0, path=[],                      pos=nil,     value={"key1": true}
+    ]                   // level=1, path=["key2"],                pos="key2",  value=["hello", {"inner": [100]}]
+  }                     // level=0, path=[],                      pos=nil,     value={"key1": true, "key2": ["hello", {"inner": [100]}]}
 ```
 
 Note that `append` start receiving deeply nested values first visiting upper levels as the object is being build.
